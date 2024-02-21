@@ -35,11 +35,25 @@
             objPar.innerHTML = kilometer + " km é igual à = " + Math.round(miles) + " milhas.";
         }
 
+        function separarDecimalEInteiro(num){
+            var numParaString = num.toString();
+            
+            var parts = numParaString.split('.');
+            
+            var numInteiro = parseInt(parts[0], 10);
+            var numDecimal = parts.length > 1 ? parseInt(parts[1], 10) : 0;
+            
+            return {
+                integer: numInteiro,
+                decimal: numDecimal
+          }
+        }
+
         function exercicio5(){
-            let num, objPar, numInt, numDec;
+            let num, res;
             num = 237.59;
-            numInt = Math.round(num);
-            alert("Número lido: " + num + "\nParte inteira: " + numInt + "\nParte decimal: " + numDec);
+            res = separarDecimalEInteiro(num);
+            alert("Número lido: " + num + "\nParte inteira: " + res.integer + "\nParte decimal: " + res.decimal);
         }
     </script>
     <title>Lista 1</title>
