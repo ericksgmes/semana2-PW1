@@ -45,6 +45,123 @@
                 mensagem += divisores.join(", ");
                 alert(mensagem);
         }
+
+        function exercicio5(){
+            let num;
+            num = 2;
+            if(num === 1){
+                alert("O número "+ num+" não é primo.");
+                return 0;
+            }
+            else if(num === 2){
+                alert("O número "+ num+" é primo.");
+                return 0;
+            }
+            else{
+                for(let i = 2; i < num; i++){
+                    if(num % i === 0){
+                        alert("O número "+ num+" não é primo.");
+                        return 0;
+                    }
+            }
+            }
+            alert("O número "+num+" é primo");
+            return 0;
+        }
+
+        function exercicio6(){
+            let num, res;
+            num=5;
+            res=0;
+            for(let i = 1; i<=num;i++){
+                res += 1/i;
+            }
+            alert(res);
+        }
+
+        function exercicio7(){
+            let alturaChico = 1.50; // Altura inicial de Chico em metros
+            let alturaZe = 1.10; // Altura inicial de Zé em metros
+            let crescimentoChico = 0.02; // Crescimento anual de Chico em metros
+            let crescimentoZe = 0.03; // Crescimento anual de Zé em metros
+            let anos = 0;
+
+            while (alturaZe <= alturaChico) {
+                alturaChico += crescimentoChico;
+                alturaZe += crescimentoZe;
+                anos++;
+            }
+
+            alert("Serão necessários " + anos + " anos para que Zé seja maior que Chico.");
+        }
+
+        function exercicio8(){
+            let n = parseInt(prompt("Digite um número inteiro e positivo para calcular o fatorial:"));
+            let fatorial = 1;
+
+            if (n < 0) {
+                alert("Por favor, digite um número inteiro e positivo.");
+            } else {
+                for (let i = 1; i <= n; i++) {
+                    fatorial *= i;
+                }
+                alert("O fatorial de " + n + " é: " + fatorial);
+            }
+        }
+
+        function exercicio9(){
+            let n = parseInt(prompt("Digite o número de termos da progressão aritmética (n):"));
+            let a1 = parseFloat(prompt("Digite o primeiro termo da progressão aritmética (a1):"));
+            let r = parseFloat(prompt("Digite a razão da progressão aritmética (r):"));
+
+            let termos = [];
+            let soma = 0;
+
+            if (n <= 0 || isNaN(n) || isNaN(a1) || isNaN(r)) {
+                alert("Por favor, insira números válidos e positivos para n, a1 e r.");
+            } else {
+                for (let i = 0; i < n; i++) {
+                    let termo = a1 + i * r;
+                    termos.push(termo);
+                    soma += termo;
+                }
+                alert("Os termos da progressão aritmética são: " + termos.join(", "));
+                alert("A soma dos elementos é: " + soma);
+            }
+        }
+
+        function exercicio10(){
+            let base = parseFloat(prompt("Digite o valor da base:"));
+            let potencia = parseInt(prompt("Digite o valor da potência:"));
+
+            if (isNaN(base) || isNaN(potencia)) {
+                alert("Por favor, insira valores numéricos válidos.");
+            } else {
+                let resultado = Math.pow(base, potencia);
+                alert(base + " elevado à potência " + potencia + " é igual a: " + resultado);
+            }
+        }
+
+        function fibonacci(n) {
+            let fib = [1, 1];
+            
+            for (let i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            
+            return fib.slice(0, n);
+        }
+
+        function exercicio11(){
+            let n = parseInt(prompt("Digite o valor de n para gerar os primeiros números da sequência de Fibonacci:"));
+
+            if (isNaN(n) || n <= 0) {
+                alert("Por favor, insira um número inteiro positivo.");
+            } else {
+                let sequenciaFibonacci = fibonacci(n);
+                alert("Os primeiros " + n + " números da sequência de Fibonacci são: " + sequenciaFibonacci.join(", "));
+            }
+        }
     </script>
 </head>
 <body>
