@@ -34,6 +34,13 @@
             let objPar = document.getElementById("ex4");
             objPar.innerHTML = kilometer + " km é igual à = " + Math.round(miles) + " milhas.";
         }
+
+        function exercicio5(){
+            let num, objPar, numInt, numDec;
+            num = 237.59;
+            numInt = Math.round(num);
+            alert("Número lido: " + num + "\nParte inteira: " + numInt + "\nParte decimal: " + numDec);
+        }
     </script>
     <title>Lista 1</title>
 </head>
@@ -46,5 +53,7 @@
     <button onclick="exercicio3()">Solução exercício 3</button>
     <p id="ex4"></p>
     <button onclick="exercicio4()">Solução exercício 4</button>
+    <p id="ex5"></p>
+    <button onclick="exercicio5()">Solução exercício 5</button>
 </body>
 </html>
