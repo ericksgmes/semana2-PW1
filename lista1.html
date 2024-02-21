@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function exercicio1(){
+            let num1 = 1;
+            let num2 = 5;
+            let res = (num1 + num2) * num1;
+            document.getElementById("ex1").innerHTML = "A soma dos números é: " + res;
+        }
+
+        function exercicio2(){
+            let libra, nwtn;
+            libra = 10;
+            nwtn = libra * 4.9;
+            let objPar = document.getElementById("ex2");
+            objPar.innerHTML = libra + " libras é igual à = " +nwtn + " newtons.";
+        }
+
+        function exercicio3(){
+            let feet, meter;
+            feet = 10;
+            meter = feet / 3.281;
+            let objPar = document.getElementById("ex3");
+            objPar.innerHTML = feet + " pés é igual à = " + Math.round(meter); + " metros.";
+        }
+
+        function exercicio4(){
+            let kilometer, miles;
+            kilometer = 10;
+            miles = kilometer / 1.61;
+            let objPar = document.getElementById("ex4");
+            objPar.innerHTML = kilometer + " km é igual à = " + Math.round(miles) + " milhas.";
+        }
+    </script>
+    <title>Lista 1</title>
+</head>
+<body>
+    <p id="ex1"></p>
+    <button onclick="exercicio1()">Solução exercício 1</button>
+    <p id="ex2"></p>
+    <button onclick="exercicio2()">Solução exercício 2</button>
+    <p id="ex3"></p>
+    <button onclick="exercicio3()">Solução exercício 3</button>
+    <p id="ex4"></p>
+    <button onclick="exercicio4()">Solução exercício 4</button>
+</body>
+</html>
